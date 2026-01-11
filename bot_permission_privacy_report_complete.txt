@@ -1,0 +1,216 @@
+
+======================================================================
+DISCORD BOT PERMISSION & PRIVACY ANALYSIS
+======================================================================
+
+DATASET OVERVIEW
+======================================================================
+Total Bots Analyzed: 5582
+Average Privacy Score: 43.0/100 (higher = better privacy)
+
+PERMISSION ANALYSIS
+======================================================================
+Bots With Administrator Permission: 2985 (53.5%)
+Bots With Message History Access: 2438 (43.7%)
+Bots With Privacy-Sensitive Permissions: 5153 (92.3%)
+
+TRANSPARENCY ANALYSIS
+======================================================================
+Open Source Bots: 671 (12.0%)
+Closed Source Bots: 4911 (88.0%)
+
+TOP 10 HIGHEST PRIVACY RISK BOTS (Lowest Scores)
+======================================================================
+
+1. Machina (Privacy Score: 0/100)
+   Total Permissions: 19
+   Privacy Concerns: 3
+   Administrator: No
+   Message History: Yes
+   Open Source: No
+   🚨 Privacy Issues:
+      - VIEW_AUDIT_LOG
+      - MANAGE_MESSAGES
+      - READ_MESSAGE_HISTORY
+
+2. SYSTEM. (Privacy Score: 0/100)
+   Total Permissions: 29
+   Privacy Concerns: 4
+   Administrator: Yes
+   Message History: Yes
+   Open Source: No
+   🚨 Privacy Issues:
+      - ADMINISTRATOR
+      - VIEW_AUDIT_LOG
+      - MANAGE_MESSAGES
+
+3. In House Queue (Privacy Score: 0/100)
+   Total Permissions: 12
+   Privacy Concerns: 2
+   Administrator: No
+   Message History: Yes
+   Open Source: No
+   🚨 Privacy Issues:
+      - MANAGE_MESSAGES
+      - READ_MESSAGE_HISTORY
+
+4. EE3 (Privacy Score: 0/100)
+   Total Permissions: 29
+   Privacy Concerns: 4
+   Administrator: Yes
+   Message History: Yes
+   Open Source: No
+   🚨 Privacy Issues:
+      - ADMINISTRATOR
+      - VIEW_AUDIT_LOG
+      - MANAGE_MESSAGES
+
+5. MultiBot (Privacy Score: 0/100)
+   Total Permissions: 16
+   Privacy Concerns: 3
+   Administrator: No
+   Message History: Yes
+   Open Source: No
+   🚨 Privacy Issues:
+      - VIEW_AUDIT_LOG
+      - MANAGE_MESSAGES
+      - READ_MESSAGE_HISTORY
+
+6. Ocean's Mod (Privacy Score: 0/100)
+   Total Permissions: 21
+   Privacy Concerns: 4
+   Administrator: Yes
+   Message History: Yes
+   Open Source: No
+   🚨 Privacy Issues:
+      - ADMINISTRATOR
+      - VIEW_AUDIT_LOG
+      - MANAGE_MESSAGES
+
+7. Tazer (Privacy Score: 0/100)
+   Total Permissions: 27
+   Privacy Concerns: 3
+   Administrator: No
+   Message History: Yes
+   Open Source: No
+   🚨 Privacy Issues:
+      - VIEW_AUDIT_LOG
+      - MANAGE_MESSAGES
+      - READ_MESSAGE_HISTORY
+
+8. Galaxy Bot (Privacy Score: 0/100)
+   Total Permissions: 29
+   Privacy Concerns: 4
+   Administrator: Yes
+   Message History: Yes
+   Open Source: No
+   🚨 Privacy Issues:
+      - ADMINISTRATOR
+      - VIEW_AUDIT_LOG
+      - MANAGE_MESSAGES
+
+9. BananaBot (Privacy Score: 0/100)
+   Total Permissions: 29
+   Privacy Concerns: 4
+   Administrator: Yes
+   Message History: Yes
+   Open Source: No
+   🚨 Privacy Issues:
+      - ADMINISTRATOR
+      - VIEW_AUDIT_LOG
+      - MANAGE_MESSAGES
+
+10. Trestic (Privacy Score: 0/100)
+   Total Permissions: 18
+   Privacy Concerns: 3
+   Administrator: No
+   Message History: Yes
+   Open Source: No
+   🚨 Privacy Issues:
+      - VIEW_AUDIT_LOG
+      - MANAGE_MESSAGES
+      - READ_MESSAGE_HISTORY
+
+KEY FINDINGS FOR RESEARCH PAPER
+======================================================================
+
+1. EXCESSIVE PERMISSIONS
+   - 53.5% request Administrator (full control)
+   - Users cannot make informed decisions about bot permissions
+   - No principle of least privilege
+
+2. PRIVACY RISKS
+   - 43.7% can read message history (surveillance)
+   - 92.3% have privacy-sensitive permissions
+   - No user notification when bots access their data
+
+3. TRANSPARENCY DEFICIT  
+   - Only 12.0% are open source
+   - Users cannot verify what bots do with permissions
+   - Closed-source bots create "black box" privacy risk
+
+RECOMMENDATIONS
+======================================================================
+1. Discord should show permission implications in plain language
+2. Require bots to disclose data collection practices
+3. Implement granular permission controls
+4. Mandatory transparency reports for bots with sensitive permissions
+5. User dashboard showing which bots have accessed their data
+
+======================================================================
+
+
+
+======================================================================
+DETAILED STATISTICAL ANALYSIS FOR RESEARCH PAPER
+======================================================================
+
+📊 PRIVACY SCORE STATISTICS (N=5582)
+----------------------------------------------------------------------
+Mean:                42.97/100
+Median:              50.00/100
+Standard Deviation:  30.67
+Minimum:             0.00/100
+Maximum:             100.00/100
+Q1 (25th percentile):0.00/100
+Q3 (75th percentile):60.00/100
+IQR:                 60.00
+
+📈 SCORE DISTRIBUTION
+----------------------------------------------------------------------
+Critical Risk (0)              1462 bots ( 26.2%)
+High Risk (1-25)               177 bots (  3.2%)
+Medium Risk (26-50)            2471 bots ( 44.3%)
+Low Risk (51-75)               607 bots ( 10.9%)
+Minimal Risk (76-100)          865 bots ( 15.5%)
+
+🔐 PERMISSION STATISTICS
+----------------------------------------------------------------------
+Mean permissions per bot:    8.60
+Median permissions per bot:  5.00
+Min permissions:             1
+Max permissions:             32
+
+⚠️  PRIVACY CONCERN STATISTICS
+----------------------------------------------------------------------
+Mean privacy concerns/bot:   1.66
+Median privacy concerns/bot: 1.00
+Max privacy concerns:        5
+
+🎯 KEY METRICS FOR PAPER
+----------------------------------------------------------------------
+Bots with ADMINISTRATOR:     2985 (53.5%)
+Bots with message history:   2438 (43.7%)
+Open source bots:            671 (12.0%)
+Bots scoring 0/100:          1462 (26.2%)
+
+📊 CORRELATIONS
+----------------------------------------------------------------------
+Mean score (with ADMIN):     39.43/100
+Mean score (without ADMIN):  47.05/100
+Mean score (open source):    59.21/100
+Mean score (closed source):  40.76/100
+
+======================================================================
+✓ Statistical analysis complete
+======================================================================

@@ -3,39 +3,32 @@ import pydirectinput
 import time
 import random
 
-def find_element(image, confidence=0.8, timeout=10):
+def find_element(image_path, confidence=0.8, timeout=10):
+    """Find an image on screen using OpenCV and return its position."""
     start = time.time()
     while time.time() - start < timeout:
-        try:
-            pos = pyautogui.locateCenterOnScreen(image, confidence=confidence)
-            if pos:
-                return pos
-        except Exception:
-            pass
+        # ADDED grayscale=True here. This helps it ignore color changes!
+        pos = pyautogui.locateCenterOnScreen(image_path, confidence=confidence, grayscale=True)
+        if pos:
+            print(f"[FOUND] {image_path} at {pos}")
+            return pos
         time.sleep(0.5)
+    print(f"[MISS] {image_path}")
     return None
 
-def find_and_click(image, confidence=0.8, timeout=10):
-    pos = find_element(image, confidence, timeout)
+def find_and_click(image_path, confidence=0.8, timeout=10):
+    """Find and click an element."""
+    pos = find_element(image_path, confidence, timeout)
     if pos:
-        pydirectinput.moveTo(int(pos.x), int(pos.y), duration=0.3)
+        x, y = pos
+        pydirectinput.moveTo(x, y, duration=0.3)
         pydirectinput.click()
         time.sleep(1)
         return True
     return False
 
-def find_and_click_retry(image, confidence=0.7, retries=15, interval=1.0):
-    for _ in range(retries):
-        try:
-            pos = pyautogui.locateCenterOnScreen(image, confidence=confidence)
-            if pos:
-                pydirectinput.moveTo(int(pos.x), int(pos.y))
-                time.sleep(0.2)
-                pydirectinput.moveRel(2, 0)
-                time.sleep(0.1)
-                pydirectinput.click()
-                return True
-        except Exception:
-            pass
-        time.sleep(interval)
-    return False
+def type_write(text):
+    """Type text into input field."""
+    for c in text:
+        pydirectinput.typewrite(c)
+        time.sleep(random.uniform(0.02, 0.08))
